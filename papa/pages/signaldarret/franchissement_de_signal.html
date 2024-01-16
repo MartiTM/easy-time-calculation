@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchissement de Signal</title>
+
+</head>
+
+<body>
+    <main>
+        <script src="../../js/signaldarret/franchissement_de_signal.js" defer></script>
+        <h1>Franchissement de Signal :</h1>
+
+        <!-- Champ de saisie -->
+
+        <form id="monFormulaire">
+            <label for="havis">Avis de franchissement de signal d'arrêt :</label>
+            <input type="time" name="havis" id="havis" oninput="enquete()"><br>
+
+            <!-- Deuxième champ de saisie de temps -->
+            <label for="henquete">Mobilisation, cheminement et enquête :</label>
+            <input type="time" id="henquete" name="henquete" ><br>
+
+            <!-- Troisème champ de saisie de temps -->
+            <label for="hreleve">Équipe de relève :</label>
+            <input type="time" id="hreleve" name="hreleve"oninput="liberation()"><br>
+
+            <!-- Quatrième champ de saisie de temps -->
+            <label for="hliberation">Libération des voies principales :</label>
+            <input type="time" id="hliberation" name="hliberation" > <br>
+
+        </form>
+
+
+        <a href="../../index.html">Retour</a>
+    </main>
+</body>
+
+</html>

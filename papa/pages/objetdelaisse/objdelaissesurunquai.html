@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet délaissé sur un quai</title>
+
+</head>
+
+<body>
+    <main>
+       
+        <h1>Objet délaissé sur un quai :</h1>
+
+        <!-- Champ de saisie -->
+
+        <form id="monFormulaire">
+            <label for="hdecouverte">heure de découverte de l'objet délaissé :</label>
+            <input type="time" name="hdecouverte" id="hdecouverte" oninput="appel(),arriveFdO(),levededouteFdO(),arrivedemineur(),levededoutedemineur()"><br>
+
+            <!-- Deuxième champ de saisie de temps -->
+            <label for="h2appel">2ème appel aux forces de l'ordre :</label>
+            <input type="time" id="h2appel" name="h2appel" oninput="arriveFdO(),levededouteFdO(),arrivedemineur(),levededoutedemineur()"><br>
+
+            <!-- Troisème champ de saisie de temps -->
+            <label for="harriveordre">Arrivée des forces de l'ordre :</label>
+            <input type="time" id="harriveordre" name="harriveordre"oninput="levededouteFdO(),arrivedemineur(),levededoutedemineur()"><br>
+
+            <!-- Quatrième champ de saisie de temps -->
+            <label for="hleveedoute">Levée de doute par forces de l’ordre :</label>
+            <input type="time" id="hleveedoute" name="hleveedoute" > <br>
+
+            <!-- Cinquième champ de saisie de temps -->
+            <label for="harrivedemineur">Arrivée des Démineurs :</label>
+            <input type="time" id="harrivedemineur" name="harrivedemineur" oninput="levededoutedemineur()"> <br>
+
+            <!-- Sixième champ de saisie de temps -->
+            <label for="hleveedemineurs">Levée de doute par démineurs :</label>
+            <input type="time" id="hleveedemineurs" name="hleveedemineurs" > <br>
+
+        </form>
+
+        <script src="../../js/objdelaisse/objdelaissesurunquai.js" defer></script>
+        <a href="../../index.html">Retour</a>
+    </main>
+</body>
+
+</html>

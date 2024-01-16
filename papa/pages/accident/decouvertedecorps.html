@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découverte d'un corps</title>
+
+</head>
+
+<body>
+    <main>
+        <h1>Découverte d'un corps :</h1>
+
+        <!-- Champ de saisie -->
+
+        <form id="monFormulaire">
+            <label for="corps">Découverte du corps :</label>
+            <input type="time" name="corps" id="corps" oninput="cil(),
+opj(),
+adc(),
+pf(),
+circul()"><br>
+            <!-- Deuxième champ de saisie de temps -->
+            <label for="heureCIL">Arrivé CIL :</label>
+            <input type="time" id="heureCIL" name="heureCIL" oninput="
+opj(),
+adc(),
+pf(),
+circul()"><br>
+            <!-- Troisième champ de saisie de temps -->
+            <label for="heureOPJ">Arrivée OPJ : :</label>
+            <input type="time" id="heureOPJ" name="heureOPJ" oninput="
+adc(),
+pf(),
+circul()"><br>
+            <!-- Quatrième champ de saisie de temps -->
+            <label for="transbordement">Transbordement : :</label>
+            <input type="time" id="transbordement" name="transbordement"><br>
+            <!-- Cinquième champ de saisie de temps -->
+            <label for="heureadc">ADC de relève : :</label>
+            <input type="time" id="heureadc" name="heureadc" oninput="
+pf(),
+circul()"> <br>
+            <!-- Sixième champ de saisie de temps -->
+            <label for="heurepf">Arrivée PF : :</label>
+            <input type="time" id="heurepf" name="heurepf" oninput="
+circul()"><br>
+            <!-- Septième champ de saisie de temps -->
+            <label for="heurecicul">Reprises des circulation :</label>
+            <input type="time" id="heurecircul" name="heurecircul"><br>
+        </form>
+
+        <script src="../../js/accident/decouvertedecorps.js" defer></script>
+        <a href="../../index.html">Retour</a>
+    </main>
+</body>
+
+</html>

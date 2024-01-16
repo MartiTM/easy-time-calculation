@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secours par arrière et pousse à la gare aval (attelage ordinaire)</title>
+
+</head>
+
+<body>
+    <main>
+        <h1>Secours par arrière et pousse à la gare aval (attelage ordinaire) :</h1>
+
+        <!-- Champ de saisie -->
+
+        <form id="monFormulaire">
+            <label for="dds">Heure DDS :</label>
+            <input type="time" name="dds" id="dds" oninput=""><br>
+
+            <!-- Deuxième champ de saisie de temps -->
+            <label for="transbordement">Définition d’une heure théorique d’expédition du secours (hors acheminement
+                astreinte):
+            </label>
+            <input type="time" name="transbordement" id="transbordement" oninput=""><br>
+
+            <!-- Troisème champ de saisie de temps -->
+            <label for="loc_secours">H MAD Loc secours à la gare en aval : :</label>
+            <input type="time" name="loc_secours" id="loc_secours" oninput=""><br>
+
+            <!-- quatrième champ de saisie de temps -->
+            <label for="exp_loc_secours">H expédition loc de secours :</label>
+            <input type="time" name="exp_loc_secours" id="exp_loc_secours" oninput=""><br>
+
+            <!-- cinquième champ de saisie de temps -->
+            <label for="accostage">H Accostage :</label>
+            <input type="time" name="accostage" id="accostage" oninput=""><br>
+
+            <!-- Sixième champ de saisie de temps -->
+            <label for="remiseenmaarche">H Remise en marche :</label>
+            <input type="time" name="remiseenmaarche" id="remiseenmaarche" oninput=""><br>
+
+            <!-- Septième champ de saisie de temps -->
+            <label for="libvp">H Libération VP :</label>
+            <input type="time" name="libvp" id="libvp" oninput=""><br>
+        </form>
+
+        <script src="../../js/soin/secoursarriere_poussegareaval_attelageordinaire.js" defer></script>
+        <a href="../../index.html">Retour</a>
+    </main>
+</body>
+
+</html>

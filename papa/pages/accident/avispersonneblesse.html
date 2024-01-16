@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/accident/avispersonneblesse.css">
+    <title>Avis Personne Blessé</title>
+
+</head>
+
+<body>
+    <main>
+        <h1>Avis Personne Blessé :</h1>
+
+        <!-- Champ de saisie -->
+
+        <form id="monFormulaire">
+            <label for="heuresignalement">Avis Personne Blessé :</label>
+            <input type="time" name="heuresignalement" id="heuresignalement" oninput="sds(),cil(),
+opj(),
+circul()">
+<input type="checkbox" name="heuresignalement" id="changerCouleur"><br>
+            <!-- Deuxième champ de saisie de temps -->
+            <label for="heureSdS">Arrivé Service de Secours :</label>
+            <input type="time" id="heureSdS" name="heureSdS" oninput="cil(),
+opj(),
+circul()"><br>
+            <!-- Troisème champ de saisie de temps -->
+            <label for="heureCIL">Arrivé CIL :</label>
+            <input type="time" id="heureCIL" name="heureCIL" oninput="
+opj(),
+circul()"><br>
+            <!-- Troisième champ de saisie de temps -->
+            <label for="heureOPJ">Arrivée OPJ : :</label>
+            <input type="time" id="heureOPJ" name="heureOPJ" oninput="
+circul()"><br>
+            <!-- Septième champ de saisie de temps -->
+            <label for="heurecicul">Reprises des circulation :</label>
+            <input type="time" id="heurecircul" name="heurecircul"><br>
+        </form>
+
+        <script src="../../js/accident/avisdepersonneblesse.js" defer></script>
+        <a href="../../index.html">Retour</a>
+    </main>
+</body>
+
+</html>
