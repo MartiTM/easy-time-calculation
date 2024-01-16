@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secours par arrière avec retour à la gare (attelage mixte)</title>
+    <link rel="stylesheet" href="../../css/css.css">
 
 </head>
 
@@ -16,36 +17,57 @@
 
         <form id="monFormulaire">
             <label for="dds">Heure DDS :</label>
-            <input type="time" name="dds" id="dds" oninput=""><br>
+            <input type="time" name="dds" id="dds" oninput="">
+            <input type="checkbox" name="dds" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'dds')">
+        <br><br>
 
             <!-- Deuxième champ de saisie de temps -->
             <label for="transbordement">Définition d’une heure théorique d’expédition du secours (hors acheminement
                 astreinte):
             </label>
-            <input type="time" name="transbordement" id="transbordement" oninput=""><br>
+            <input type="time" name="transbordement" id="transbordement" oninput="">
+            <input type="checkbox" name="transbordement" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'transbordement')">
+        <br><br>
 
             <!-- Troisème champ de saisie de temps -->
             <label for="loc_secours">H MAD Loc secours à la gare en aval : :</label>
-            <input type="time" name="loc_secours" id="loc_secours" oninput=""><br>
+            <input type="time" name="loc_secours" id="loc_secours" oninput="">
+            <input type="checkbox" name="loc_secours" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'loc_secours')">
+        <br><br>
 
             <!-- quatrième champ de saisie de temps -->
             <label for="exp_loc_secours">H expédition loc de secours :</label>
-            <input type="time" name="exp_loc_secours" id="exp_loc_secours" oninput=""><br>
+            <input type="time" name="exp_loc_secours" id="exp_loc_secours" oninput="">
+            <input type="checkbox" name="exp_loc_secours" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'exp_loc_secours')">
+        <br><br>
 
             <!-- cinquième champ de saisie de temps -->
             <label for="accostage">H Accostage :</label>
-            <input type="time" name="accostage" id="accostage" oninput=""><br>
+            <input type="time" name="accostage" id="accostage" oninput="">
+            <input type="checkbox" name="accostage" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'accostage')">
+        <br><br>
 
             <!-- Sixième champ de saisie de temps -->
             <label for="remiseenmaarche">H Remise en marche :</label>
-            <input type="time" name="remiseenmaarche" id="remiseenmaarche" oninput=""><br>
+            <input type="time" name="remiseenmaarche" id="remiseenmaarche" oninput="">
+            <input type="checkbox" name="remiseenmaarche" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'remiseenmaarche')">
+        <br><br>
 
             <!-- Septième champ de saisie de temps -->
             <label for="libvp">H Libération VP :</label>
-            <input type="time" name="libvp" id="libvp" oninput=""><br>
+            <input type="time" name="libvp" id="libvp" oninput="">
+            <input type="checkbox" name="libvp" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'libvp')">
+        <br><br>
         </form>
 
-        <script src="../../js/soin/secoursarriere_retourgarearriere_attelagemixte.js" defer></script>
+        <script src="../../js/js.js" defer></script>
         <a href="../../index.html">Retour</a>
     </main>
 </body>

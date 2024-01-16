@@ -5,35 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franchissement de Signal</title>
+    <link rel="stylesheet" href="../../css/css.css">
 
 </head>
 
 <body>
     <main>
-        <script src="../../js/signaldarret/franchissement_de_signal.js" defer></script>
+
         <h1>Franchissement de Signal :</h1>
 
         <!-- Champ de saisie -->
 
         <form id="monFormulaire">
             <label for="havis">Avis de franchissement de signal d'arrêt :</label>
-            <input type="time" name="havis" id="havis" oninput="enquete()"><br>
+            <input type="time" name="havis" id="havis" oninput="calculTemps('havis','henquete',90),
+            calculTemps('hreleve','hliberation',30)">
+            <input type="checkbox" name="havis" class="changerCouleurCheckbox"
+                onchange="changerFondCheckbox(this, 'havis')">
+            <br><br>
 
             <!-- Deuxième champ de saisie de temps -->
             <label for="henquete">Mobilisation, cheminement et enquête :</label>
-            <input type="time" id="henquete" name="henquete" ><br>
+            <input type="time" id="henquete" name="henquete">            
+            <input type="checkbox" name="henquete" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'henquete')">
+        <br><br>
 
             <!-- Troisème champ de saisie de temps -->
             <label for="hreleve">Équipe de relève :</label>
-            <input type="time" id="hreleve" name="hreleve"oninput="liberation()"><br>
+            <input type="time" id="hreleve" name="hreleve" oninput="calculTemps('hreleve','hliberation',30)">
+            <input type="checkbox" name="hreleve" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'hreleve')">
+        <br><br>
 
             <!-- Quatrième champ de saisie de temps -->
             <label for="hliberation">Libération des voies principales :</label>
-            <input type="time" id="hliberation" name="hliberation" > <br>
+            <input type="time" id="hliberation" name="hliberation">
+            <input type="checkbox" name="hliberation" class="changerCouleurCheckbox"
+            onchange="changerFondCheckbox(this, 'hliberation')">
+             <br>
 
         </form>
 
-
+        <script src="../../js/js.js" defer></script>
         <a href="../../index.html">Retour</a>
     </main>
 </body>
