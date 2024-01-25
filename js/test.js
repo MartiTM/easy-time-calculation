@@ -3,13 +3,6 @@ function padZero(num) {
     return num < 10 ? "0" + num : num;
 }
 
-
-
-
-
-
-
-
 // Fonction pour changer le fond en vert lorsque la checkbox est cochée
 function changerFondCheckbox(checkbox, elementID) {
     var avisPersonneBlessee = document.getElementById(elementID);
@@ -24,7 +17,7 @@ function changerFondCheckbox(checkbox, elementID) {
 
 
 
-function calculTemps(entreeID,sortieID,temps) {
+function calculTemps(entreeID, sortieID, temps) {
     // Récupérer la valeur de l'élément d'entrée
     var heur = document.getElementById(entreeID).value;
 
@@ -45,17 +38,38 @@ function calculTemps(entreeID,sortieID,temps) {
     organismeElement.value = padZero(heures) + ":" + padZero(minutes);
 }
 
-//Fonction pour ajouter des heures
-function ajoutHeure(capteurID){
+
+
+
+
+
+// Fonction pour ajouter des heures
+function ajoutHeure(capteurID) {
+    // Créer un nouvel ensemble de conteneurs
+    var ensembleContainer = document.createElement("div");
+
     // Créer un nouvel élément input de type time
     var nouvelInputTime = document.createElement("input");
     nouvelInputTime.type = "time";
 
+    // Créer un nouvel élément input de type texte
     var nouvelInputText = document.createElement("input");
     nouvelInputText.type = "text";
 
-    // Ajouter l'élément au conteneur
+    // Créer le bouton de suppression
+    var boutonSuppression = document.createElement("button");
+    boutonSuppression.textContent = "Supprimer";
+    boutonSuppression.addEventListener("click", function () {
+        // Supprimer l'ensemble lors du clic sur le bouton
+        conteneur.removeChild(ensembleContainer);
+    });
+
+    // Ajouter les éléments au conteneur
+    ensembleContainer.appendChild(nouvelInputText);
+    ensembleContainer.appendChild(nouvelInputTime);
+    ensembleContainer.appendChild(boutonSuppression);
+
+    // Ajouter l'ensemble au conteneur principal
     var conteneur = document.getElementById(capteurID);
-    conteneur.appendChild(nouvelInputText);
-    conteneur.appendChild(nouvelInputTime);
+    conteneur.appendChild(ensembleContainer);
 }

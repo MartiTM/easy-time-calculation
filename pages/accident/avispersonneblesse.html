@@ -15,45 +15,57 @@
 
         <!-- Champ de saisie -->
         <form id="monFormulaire">
-            <label for="heuresignalement">Avis Personne Blessé :</label>
-            <input type="time" name="heuresignalement" id="heuresignalement" oninput="calculTemps('heuresignalement','heureSdS',30),calculTemps('heureSdS','heureCIL',10),calculTemps('heureCIL','heureOPJ',20),
+            <div id="champAvisPersonneBlesse">
+                <label for="heuresignalement">Avis Personne Blessé :</label>
+                <input type="time" name="heuresignalement" id="heuresignalement" oninput="calculTemps('heuresignalement','heureSdS',30),calculTemps('heureSdS','heureCIL',10),calculTemps('heureCIL','heureOPJ',20),
             calculTemps('heureOPJ','heurecircul',100)">
-          
-          <input type="checkbox" name="heuresignalement" class="changerCouleurCheckbox"
-                onchange="changerFondCheckbox(this, 'heuresignalement')"><br>
+
+                <input type="checkbox" name="heuresignalement" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heuresignalement')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champAvisPersonneBlesse')">Ajoutez heure</button><br>
 
             <!-- Deuxième champ de saisie de temps -->
-            <label for="heureSdS">Arrivé Service de Secours :</label>
-            <input type="time" id="heureSdS" name="heureSdS" oninput="calculTemps('heureSdS','heureCIL',10),calculTemps('heureCIL','heureOPJ',20),
+            <div id="champArriveServiceSecours">
+                <label for="heureSdS">Arrivé Service de Secours :</label>
+                <input type="time" id="heureSdS" name="heureSdS" oninput="calculTemps('heureSdS','heureCIL',10),calculTemps('heureCIL','heureOPJ',20),
             calculTemps('heureOPJ','heurecircul',100)">
-           
-           <input type="checkbox" name="heureSdS" class="changerCouleurCheckbox"
-                onchange="changerFondCheckbox(this, 'heureSdS')"><br>
 
+                <input type="checkbox" name="heureSdS" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heureSdS')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champArriveServiceSecours')">Ajoutez heure</button><br>
             <!-- Troisème champ de saisie de temps -->
-            <label for="heureCIL">Arrivé CIL :</label>
-            <input type="time" id="heureCIL" name="heureCIL" oninput="calculTemps('heureCIL','heureOPJ',20),calculTemps('heureOPJ','heurecircul',100)">
-           
-            <input type="checkbox" name="heureCIL" class="changerCouleurCheckbox"
-                onchange="changerFondCheckbox(this, 'heureCIL')"><br>
+            <div id="champArriveCil">
+                <label for="heureCIL">Arrivé CIL :</label>
+                <input type="time" id="heureCIL" name="heureCIL"
+                    oninput="calculTemps('heureCIL','heureOPJ',20),calculTemps('heureOPJ','heurecircul',100)">
 
+                <input type="checkbox" name="heureCIL" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heureCIL')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champArriveCil')">Ajoutez heure</button><br>
             <!-- Quatrième champ de saisie de temps -->
-            <label for="heureOPJ">Arrivée OPJ : :</label>
-            <input type="time" id="heureOPJ" name="heureOPJ" oninput="calculTemps('heureOPJ','heurecircul',100)">
-           
-            <input type="checkbox" name="heureOPJ" class="changerCouleurCheckbox"
-                onchange="changerFondCheckbox(this, 'heureOPJ')"><br>
+            <div id="champHeureOPJ">
+                <label for="heureOPJ">Arrivée OPJ : :</label>
+                <input type="time" id="heureOPJ" name="heureOPJ" oninput="calculTemps('heureOPJ','heurecircul',100)">
 
+                <input type="checkbox" name="heureOPJ" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heureOPJ')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champHeureOPJ')">Ajoutez heure</button><br>
             <!-- Cinquième champ de saisie de temps -->
-            <label for="heurecicul">Reprises des circulation :</label>
-            <input type="time" id="heurecircul" name="heurecircul">
-          
-            <input type="checkbox" name="heurecircul" class="changerCouleurCheckbox"
-                onchange="changerFondCheckbox(this, 'heurecircul')"><br>
-                
+            <div id="champHeureCircul">
+                <label for="heurecicul">Reprises des circulation :</label>
+                <input type="time" id="heurecircul" name="heurecircul">
+
+                <input type="checkbox" name="heurecircul" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heurecircul')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champHeureCircul')">Ajoutez heure</button><br>
         </form>
 
-        <script src="../../js/js.js" defer></script>
+        <script src="../../js/test.js" defer></script>
         <a href="../../index.html">Retour</a>
     </main>
 </body>
