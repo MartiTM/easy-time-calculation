@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/css.css">
+    <title>Accident de Personnes</title>
+
+</head>
+
+<body>
+    <main>
+        <h1>Accident de Personnes :</h1>
+        <script src="../../js/js.js" defer></script>
+
+
+        <!-- Champ de saisie -->
+        <form id="monFormulaire">
+            <div id="champSignalement">
+                <input type="time" name="heuresignalement" id="heuresignalement" oninput="
+                calculTemps('heuresignalement','heureCIL',40),
+                calculTemps('heureCIL','heureOPJ',20),
+                calculTemps('heureCIL','transbordement',20),
+                calculTemps('heureOPJ','heureadc',20),
+                calculTemps('heureadc','heurepf',60),
+                calculTemps('heurepf','heurecircul',20)">
+                <input type="text" name="heuresignalement" id="heuresignalementtxt"
+                    placeholder=": Signalement Accident de Personnes">
+                <input type="checkbox" name="heuresignalement" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heuresignalement','heuresignalementtxt')">
+
+            </div>
+            <button type="button" onclick="ajoutHeure('champSignalement')">Ajoutez une étape</button><br>
+
+            <!-- Deuxième champ de saisie de temps -->
+
+            <div id="champsCil">
+                <input type="time" id="heureCIL" name="heureCIL" oninput="
+                calculTemps('heureCIL','heureOPJ',20),calculTemps('heureCIL','transbordement',20),
+                calculTemps('heureOPJ','heureadc',20),
+                calculTemps('heureadc','heurepf',40),
+                calculTemps('heurepf','heurecircul',40)">
+                <input type="text" name="heureCIL" id="heureCILtxt" placeholder=": Arrivée CIL">
+
+                <input type="checkbox" name="heureCIL" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heureCIL','heureCILtxt')">
+
+            </div>
+            <button type="button" onclick="ajoutHeure('champsCil')">Ajoutez heure</button><br>
+
+            <!-- Troisième champ de saisie de temps -->
+            <div id="champarriveOPJ">
+                <input type="time" id="heureOPJ" name="heureOPJ" oninput="
+                        calculTemps('heureOPJ','heureadc',20),
+                        calculTemps('heureadc','heurepf',40),
+                        calculTemps('heurepf','heurecircul',40)">
+                <input type="text" name="heureOPJ" id="heureOPJtxt" placeholder=": Arrivée OPJ">
+                <input type="checkbox" name="heureCIL" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heureOPJ','heureOPJtxt')"><br>
+            </div>
+            <button type="button" onclick="ajoutHeure('champarriveOPJ')">Ajoutez une étape</button><br>
+
+            <!-- Quatrième champ de saisie de temps -->
+            <div id="champstransbordement">
+                <input type="time" id="transbordement" name="transbordement">
+                <input type="text" name="transbordement" id="transbordementtxt" placeholder=": Transbordement">
+                <input type="checkbox" name="transbordement" id='transbordementcheckbox'class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'transbordement','transbordementtxt')">
+                <button type="button" id='supptransbordement'onclick="suppTransbo('supptransbordement','transbordement')">Supprimez Transbordement</button><br>
+
+            </div>
+            
+            <button type="button" onclick="ajoutHeure('champstransbordement')" id='transbordementajoutheure' >Ajoutez une étape</button><br>
+
+            <!-- Cinquième champ de saisie de temps -->
+            <div id="champsadc">
+                <input type="time" id="heureadc" name="heureadc" oninput="calculTemps('heureadc','heurepf',40),
+                calculTemps('heurepf','heurecircul',40)">
+
+                <input type="text" name="heureadc" id="heureadctxt" placeholder=": Arrivée ADC de relève">
+
+                <input type="checkbox" name="heureadc" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heureadc','heureadctxt')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champsadc')">Ajoutez une étape</button><br>
+
+
+            <!-- Sixième champ de saisie de temps -->
+            <div id="champspf">
+                <input type="time" id="heurepf" name="heurepf" oninput="calculTemps('heurepf','heurecircul',40)">
+
+                <input type="text" name="heurepf" id="heurepftxt" placeholder=": Arrivée Pompe Funèbre">
+
+                <input type="checkbox" name="heurepf" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heurepf','heurepftxt')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champspf')">Ajoutez une étape</button><br>
+
+
+            <!-- Septième champ de saisie de temps -->
+            <div id="champsreprise">
+                <input type="time" id="heurecircul" name="heurecircul">
+                <input type="text" name="heurecircul" id="heurecircultxt" placeholder=": Reprises des circulation ">
+                <input type="checkbox" name="heurecicul" class="changerCouleurCheckbox"
+                    onchange="changerFondCheckbox(this, 'heurecircul','heurecircultxt')">
+            </div>
+            <button type="button" onclick="ajoutHeure('champsreprise')">Ajoutez une étape</button><br>
+        </form>
+        <br>
+        
+        <a href="../../index.html">Retour</a>
+    </main>
+</body>
+
+</html>
