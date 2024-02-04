@@ -1,0 +1,37 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Arrivée CIL",
+            "estSupprimable": true,
+            "ajoutMinutes": 40
+        },
+        {
+            "texte": "Arrivée OPJ",
+            "estSupprimable": true,
+            "ajoutMinutes": 20
+        },
+        {
+            "texte": "Transbordement",
+            "estSupprimable": true
+        },
+        {
+        "texte": "Arrivée ADC de relève",
+            "estSupprimable": true,
+            "ajoutMinutes": 20
+        },
+        {
+            "texte": "Arrivée des Pompe Funèbre",
+            "estSupprimable": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 20
+        }
+    ]
+}

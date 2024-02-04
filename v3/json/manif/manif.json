@@ -1,0 +1,23 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Arrêts des Circulations",
+            "estSupprimable": true,
+            "ajoutMinutes": 10
+        },
+        {
+            "texte": "Arrivée CIL",
+            "estSupprimable": true,
+            "ajoutMinutes": 30
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 20
+        }
+    ]
+}

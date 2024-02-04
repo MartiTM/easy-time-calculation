@@ -1,0 +1,28 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "1er Avis Forces de l'Ordre",
+            "estSupprimable": true,
+            "ajoutMinutes": 10
+        },
+        {
+            "texte": "Demande Interventions des Forces de l'Ordre",
+            "estSupprimable": true,
+            "ajoutMinutes": 10
+        },
+        {
+        "texte": "Arrivée des Forces de l'Ordre",
+            "estSupprimable": true,
+            "ajoutMinutes": 30
+        },
+        {
+            "texte": "Levée de doutes des Forces de l'Ordre",
+            "estSupprimable": false,
+            "ajoutMinutes": 10
+        }
+    ]
+}
