@@ -10,7 +10,7 @@
             "ajoutMinutes": 10
         },
         {
-            "texte": "Demande Interventions des Forces de l'Ordre",
+            "texte": "Demande Intervention des Forces de l'Ordre",
             "estSupprimable": true,
             "ajoutMinutes": 10
         },
@@ -20,7 +20,7 @@
             "ajoutMinutes": 30
         },
         {
-            "texte": "Levée de doutes des Forces de l'Ordre",
+            "texte": "Levée de doute des Forces de l'Ordre",
             "estSupprimable": false,
             "ajoutMinutes": 10
         }

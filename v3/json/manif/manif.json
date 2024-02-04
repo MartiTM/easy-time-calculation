@@ -5,7 +5,7 @@
             "estSupprimable": false
         },
         {
-            "texte": "Arrêts des Circulations",
+            "texte": "Arrêt des Circulations",
             "estSupprimable": true,
             "ajoutMinutes": 10
         },
