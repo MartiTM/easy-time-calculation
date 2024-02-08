@@ -1,0 +1,12 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "",
+            "estSupprimable": false
+        }
+    ]
+}

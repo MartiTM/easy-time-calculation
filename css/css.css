@@ -2,3 +2,19 @@
 .fond-vert {
     background-color: rgb(34, 194, 34);
 }
+
+input::placeholder{
+    color: black;
+}
+input[type=text], textarea{
+    width:350px;
+    height: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+input[type=time]{
+    margin: 10px;
+}
+input[type=checkbox]{
+    margin-right: 15px;
+}

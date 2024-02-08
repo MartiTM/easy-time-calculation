@@ -1,0 +1,37 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Arrivée CIL",
+            "estSupprimable": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Transbordement",
+            "estSupprimable": true
+        },
+        {
+            "texte": "Arrivée Equipe de Relevage",
+            "estSupprimable": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Fin opération de relevage",
+            "estSupprimable": true,
+            "ajoutMinutes": 180
+        },
+        {
+            "texte": "Remise en état des installations",
+            "estSupprimable": true,
+            "ajoutMinutes": 120
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 15
+        }
+    ]
+}
