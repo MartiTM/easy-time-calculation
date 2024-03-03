@@ -15,7 +15,7 @@
             "ajoutMinutes": 20
         },
         {
-            "texte": "Transbordement",
+            "texte": "Évacuation",
             "estSupprimable": true
         },
         {
@@ -29,9 +29,14 @@
             "ajoutMinutes": 60
         },
         {
+            "texte": "Remise en marche du train",
+            "estSupprimable": true,
+            "ajoutMinutes": 15
+        },
+        {
             "texte": "Reprise des circulations",
             "estSupprimable": false,
-            "ajoutMinutes": 20
+            "ajoutMinutes": 5
         }
     ]
 }

@@ -43,6 +43,8 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     nouvelInputTime.type = "time";
     nouvelInputTime.className = "heure";
 
+    
+
     if (elementPrecedent != null) {
 
         elementPrecedent.getElementsByClassName('heure')[0].addEventListener('change', function (event) {
@@ -55,8 +57,6 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
 
     }
 
-
-
     // Créer un nouvel élément input de type texte
     var nouvelInputText = document.createElement("input");
     nouvelInputText.type = "text";
@@ -65,10 +65,12 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     // Créer un bouton pour rajouter des étapes
     var nouveauBouton = document.createElement("button");
     nouveauBouton.textContent = "Ajoutez une étape";
+    
 
     nouveauBouton.addEventListener('click', function () {
         var newDiv = ajouterUneEtape('à remplir', true)
-        div.insertAdjacentElement('afterend', newDiv);
+        newDiv.className="nouvelleEtape";
+        div.insertAdjacentElement('afterend', newDiv); 
     });
 
     // passer à la ligne
@@ -108,8 +110,10 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     div.appendChild(br);
     div.appendChild(nouveauBouton);
 
-    return div
+    return div;
+
 }
+
 
 function listeDEtape(ensemble) {
 
@@ -133,3 +137,25 @@ function LancerPage(cheminJSON) {
 }
 
 export {LancerPage}
+
+
+const button = document.querySelector("button");
+const div = document.querySelector("main");
+
+button.addEventListener("click", function () {
+    
+
+    html2canvas(div).then((canvas) => {
+        
+        const imageDataURL = canvas.toDataURL("image/jpeg");
+
+        // Create a download link for the image
+        const nom = prompt('Quel nom pour le document?');
+        const a = document.createElement("a");
+        a.href = imageDataURL;
+        a.download = nom;
+        a.click();
+
+    });
+
+});

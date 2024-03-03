@@ -5,23 +5,24 @@
             "estSupprimable": false
         },
         {
-            "texte": "Arrivée CIL",
+            "texte": "Arrivée Agents",
             "estSupprimable": true,
             "ajoutMinutes": 40
         },
         {
-            "texte": "Arrivée Agent Voie",
+            "texte": "Évacuation",
             "estSupprimable": true,
             "ajoutMinutes": 20
         },
         {
-            "texte": "Évacuation",
-            "estSupprimable": true
+            "texte": "Remise en état",
+            "estSupprimable": true,
+            "ajoutMinutes": 90
         },
         {
             "texte": "Reprise des circulations",
             "estSupprimable": false,
-            "ajoutMinutes": 120
+            "ajoutMinutes": 10
         }
     ]
 }

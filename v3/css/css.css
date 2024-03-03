@@ -18,3 +18,25 @@ input[type=time]{
 input[type=checkbox]{
     margin-right: 15px;
 }
+
+#capturedEcran{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+main {
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap:wrap;
+
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nouvelleEtape input[type=text]{
+    background-color: aqua;
+}

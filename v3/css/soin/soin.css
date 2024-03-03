@@ -1,0 +1,42 @@
+/* Ajoutez cette règle pour la classe "fond-vert" */
+.fond-vert {
+    background-color: rgb(34, 194, 34);
+}
+
+input::placeholder{
+    color: black;
+}
+input[type=text]{
+    width:350px;
+    height: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+input[type=time]{
+    margin: 10px;
+}
+input[type=checkbox]{
+    margin-right: 15px;
+}
+
+#capturedEcran{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+main {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 50px;
+    padding-right: 75px;
+
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+

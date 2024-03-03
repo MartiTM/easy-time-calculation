@@ -15,7 +15,7 @@
             "ajoutMinutes": 15
         },
         {
-            "texte": "Transbordement",
+            "texte": "Évacuation",
             "estSupprimable": true,
             "ajoutMinutes": 60
         },
