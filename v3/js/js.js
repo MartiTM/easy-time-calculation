@@ -31,6 +31,39 @@ function calculTemps(temps, elementHeureAvant, elementHeureMaintenant) {
 }
 
 
+function depassementHeure(tempsReference, elementPrecedent, elementAVerifier) {
+
+    // Récupérer la valeur de l'élément d'entrée
+    var heureRecuperePrecedent = elementPrecedent.value;
+
+    // Extraction des heures et des minutes
+    var heurePrecedent = parseInt(heureRecuperePrecedent.substring(0, 2), 10);
+    var minutesPrecedent = parseInt(heureRecuperePrecedent.substring(3), 10);
+
+
+    // Récupérer la valeur de l'élément d'entrée
+    var heureRecupereAVerifier = elementAVerifier.value;
+
+    // Extraction des heures et des minutes
+    var heureAVerifier = parseInt(heureRecupereAVerifier.substring(0, 2), 10);
+    var minutesAVerifier = parseInt(heureRecupereAVerifier.substring(3), 10);
+
+    // Ajoute le temps en minutes et ajuste les heures si nécessaire
+    minutesPrecedent += tempsReference;
+    heurePrecedent += Math.floor(minutesPrecedent / 60); // Ajoute le nombre d'heures entières dans les minutes
+    minutesPrecedent = minutesPrecedent % 60; // Garde seulement le reste, c'est-à-dire les minutes restantes après avoir ajouté les heures
+
+    // Assurez-vous que les heures restent dans la plage de 0 à 23
+    heurePrecedent = heurePrecedent % 24;
+
+    if (heureAVerifier > heurePrecedent || minutesAVerifier > minutesPrecedent) {
+        elementAVerifier.classList.add("fond-rouge");
+    } else {
+        elementAVerifier.classList.remove("fond-rouge");
+    }
+
+}
+
 // Fonction pour ajouter une étape
 function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0, elementPrecedent = null) {
     // Créer un nouvel ensemble de conteneurs
@@ -50,9 +83,12 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
         elementPrecedent.getElementsByClassName('heure')[0].addEventListener('change', function (event) {
 
             calculTemps(ajoutMinutes, event.target, nouvelInputTime)
-
         });
 
+
+        nouvelInputTime.addEventListener('change', function () {
+            depassementHeure(ajoutMinutes, elementPrecedent.getElementsByClassName('heure')[0], nouvelInputTime)
+        });
 
 
     }
@@ -69,7 +105,7 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
 
     nouveauBouton.addEventListener('click', function () {
         var newDiv = ajouterUneEtape('à remplir', true)
-        newDiv.className = "nouvelleEtape";
+        newDiv.classList.add("nouvelleEtape");
         div.insertAdjacentElement('afterend', newDiv);
     });
 

@@ -3,6 +3,10 @@
     background-color: rgb(34, 194, 34);
 }
 
+.fond-rouge {
+    background-color: red;
+}
+
 input::placeholder{
     color: black;
 }
