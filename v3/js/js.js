@@ -43,7 +43,7 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     nouvelInputTime.type = "time";
     nouvelInputTime.className = "heure";
 
-    
+
 
     if (elementPrecedent != null) {
 
@@ -65,12 +65,12 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     // Créer un bouton pour rajouter des étapes
     var nouveauBouton = document.createElement("button");
     nouveauBouton.textContent = "Ajoutez une étape";
-    
+
 
     nouveauBouton.addEventListener('click', function () {
         var newDiv = ajouterUneEtape('à remplir', true)
-        newDiv.className="nouvelleEtape";
-        div.insertAdjacentElement('afterend', newDiv); 
+        newDiv.className = "nouvelleEtape";
+        div.insertAdjacentElement('afterend', newDiv);
     });
 
     // passer à la ligne
@@ -131,31 +131,31 @@ function listeDEtape(ensemble) {
 
 function LancerPage(cheminJSON) {
     fetch(cheminJSON)
-    .then(response => response.json())
-    .then(json => listeDEtape(json))
-    .catch(err => console.log(err))
+        .then(response => response.json())
+        .then(json => listeDEtape(json))
+        .catch(err => console.log(err))
 }
 
-export {LancerPage}
+export { LancerPage }
 
 
 const button = document.querySelector("button");
 const div = document.querySelector("main");
 
 button.addEventListener("click", function () {
-    
 
-    html2canvas(div).then((canvas) => {
-        
-        const imageDataURL = canvas.toDataURL("image/jpeg");
+    const nom = prompt('Quel nom pour le document?');
+    if (nom != null) {
+        html2canvas(div).then((canvas) => {
 
-        // Create a download link for the image
-        const nom = prompt('Quel nom pour le document?');
-        const a = document.createElement("a");
-        a.href = imageDataURL;
-        a.download = nom;
-        a.click();
+            const imageDataURL = canvas.toDataURL("image/jpeg");
 
-    });
+            // Create a download link for the image
+            const a = document.createElement("a");
+            a.href = imageDataURL;
+            a.download = nom;
+            a.click();
 
+        });
+    };
 });
