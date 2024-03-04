@@ -184,7 +184,7 @@ button.addEventListener("click", function () {
     if (nom != null) {
         html2canvas(div).then((canvas) => {
 
-            const imageDataURL = canvas.toDataURL("image/jpeg");
+            const imageDataURL = canvas.toDataURL("image/jpg");
 
             // Create a download link for the image
             const a = document.createElement("a");
