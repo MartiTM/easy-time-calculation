@@ -172,7 +172,9 @@ function LancerPage(cheminJSON) {
         .catch(err => console.log(err))
 }
 
-export { LancerPage }
+path = document.currentScript.getAttribute('config');
+
+LancerPage(path)
 
 
 const button = document.querySelector("button");
