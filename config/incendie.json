@@ -12,12 +12,13 @@
         {
             "texte": "Arrivée CIL",
             "estSupprimable": true,
-            "ajoutMinutes": 20
+            "ajoutMinutes": 40,
+            "estIndependant": true
         },
         {
-        "texte": "Arrivée Agents Voie",
+            "texte": "Arrivée Agents Voie",
             "estSupprimable": true,
-            "ajoutMinutes": 20
+            "ajoutMinutes": 50
         },
         {
             "texte": "Reprise des circulations",

@@ -11,7 +11,9 @@
         },
         {
             "texte": "Évacuation",
-            "estSupprimable": true
+            "estSupprimable": true,
+            "estIndependant": true,
+            "ajoutMinutes": 60
         },
         {
             "texte": "Fin de remise en état des installations",

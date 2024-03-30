@@ -12,7 +12,8 @@
         {
             "texte": "Arrivée CIL",
             "estSupprimable": true,
-            "ajoutMinutes": 20
+            "ajoutMinutes": 20,
+            "estIndependant": true
         },
         {
             "texte": "Reprise des circulations",

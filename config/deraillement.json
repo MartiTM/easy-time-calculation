@@ -7,16 +7,19 @@
         {
             "texte": "Arrivée CIL",
             "estSupprimable": true,
-            "ajoutMinutes": 60
+            "ajoutMinutes": 60,
+            "estIndependant": true
         },
         {
             "texte": "Évacuation",
-            "estSupprimable": true
+            "estSupprimable": true,
+            "estIndependant": true,
+            "ajoutMinutes": 60
         },
         {
             "texte": "Arrivée Equipe de Relevage",
             "estSupprimable": true,
-            "ajoutMinutes": 60
+            "ajoutMinutes": 120
         },
         {
             "texte": "Relevage",

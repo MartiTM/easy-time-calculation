@@ -153,15 +153,26 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
 
 function listeDEtape(ensemble) {
 
+    var premiereDiv = null
     var divPrecedente = null
 
     for (const element of ensemble.liste) {
-        var div = ajouterUneEtape(element.texte, element.estSupprimable, element.ajoutMinutes, divPrecedente)
+        divUtilise = divPrecedente
+        if (element.estIndependant) {
+            divUtilise = premiereDiv
+        }
+
+        var div = ajouterUneEtape(element.texte, element.estSupprimable, element.ajoutMinutes, divUtilise)
 
         // Ajouter l'ensemble au conteneur principal
         var conteneur = document.getElementById('listehorraire');
         conteneur.appendChild(div);
-        divPrecedente = div
+        if (!element.estIndependant) {
+            divPrecedente = div
+        }
+        if (premiereDiv == null) {
+            premiereDiv = divPrecedente
+        }
     }
 }
 

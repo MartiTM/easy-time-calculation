@@ -15,7 +15,7 @@
             "ajoutMinutes": 10
         },
         {
-        "texte": "Arrivée des Forces de l'Ordre",
+            "texte": "Arrivée des Forces de l'Ordre",
             "estSupprimable": true,
             "ajoutMinutes": 30
         },

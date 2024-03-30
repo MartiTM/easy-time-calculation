@@ -12,7 +12,8 @@
         {
             "texte": "Évacuation",
             "estSupprimable": true,
-            "ajoutMinutes": 20
+            "ajoutMinutes": 60,
+            "estIndependant": true
         },
         {
             "texte": "Remise en état",

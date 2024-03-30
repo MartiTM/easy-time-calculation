@@ -17,12 +17,13 @@
         {
             "texte": "Évacuation",
             "estSupprimable": true,
-            "ajoutMinutes": 60
+            "ajoutMinutes": 60,
+            "estIndependant": true
         },
         {
         "texte": "Expedition Engin de Secours",
             "estSupprimable": true,
-            "ajoutMinutes": 60
+            "ajoutMinutes": 80
         },
         {
             "texte": "Accostage",
