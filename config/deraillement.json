@@ -1,0 +1,40 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Arrivée CIL",
+            "estSupprimable": true,
+            "ajoutMinutes": 60,
+            "estIndependant": true
+        },
+        {
+            "texte": "Évacuation",
+            "estSupprimable": true,
+            "estIndependant": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Arrivée Equipe de Relevage",
+            "estSupprimable": true,
+            "ajoutMinutes": 120
+        },
+        {
+            "texte": "Relevage",
+            "estSupprimable": true,
+            "ajoutMinutes": 180
+        },
+        {
+            "texte": "Remise en état des installations",
+            "estSupprimable": true,
+            "ajoutMinutes": 120
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 15
+        }
+    ]
+}

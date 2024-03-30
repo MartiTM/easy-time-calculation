@@ -1,0 +1,44 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Demande de secours",
+            "estSupprimable": true,
+            "ajoutMinutes": 15
+        },
+        {
+            "texte": "Mise à disposition Engin de secours",
+            "estSupprimable": true,
+            "ajoutMinutes": 15
+        },
+        {
+            "texte": "Évacuation",
+            "estSupprimable": true,
+            "ajoutMinutes": 60,
+            "estIndependant": true
+        },
+        {
+        "texte": "Expedition Engin de Secours",
+            "estSupprimable": true,
+            "ajoutMinutes": 80
+        },
+        {
+            "texte": "Accostage",
+            "estSupprimable": true,
+            "ajoutMinutes": 30
+        },
+        {
+            "texte": "Remise en Marche",
+            "estSupprimable": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 30
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Arrivée CIL",
+            "estSupprimable": true,
+            "ajoutMinutes": 40,
+            "estIndependant": true
+        },
+        {
+            "texte": "Évacuation",
+            "estSupprimable": true,
+            "estIndependant": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Arrivée Agents Voie",
+            "estSupprimable": true,
+            "ajoutMinutes": 60
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 30
+        }
+    ]
+}

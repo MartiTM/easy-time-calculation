@@ -1,0 +1,29 @@
+{
+        "liste": [
+        {
+            "texte": "Signalement",
+            "estSupprimable": false
+        },
+        {
+            "texte": "Arrivée Agents",
+            "estSupprimable": true,
+            "ajoutMinutes": 40
+        },
+        {
+            "texte": "Évacuation",
+            "estSupprimable": true,
+            "ajoutMinutes": 60,
+            "estIndependant": true
+        },
+        {
+            "texte": "Remise en état",
+            "estSupprimable": true,
+            "ajoutMinutes": 90
+        },
+        {
+            "texte": "Reprise des circulations",
+            "estSupprimable": false,
+            "ajoutMinutes": 10
+        }
+    ]
+}
