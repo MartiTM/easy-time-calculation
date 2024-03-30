@@ -1,9 +1,0 @@
-        /* Style par défaut pour les champs de saisie de temps */
-        input[type="time"] {
-            background-color: white;
-        }
-
-        /* Style lorsque la checkbox est cochée */
-        input[type="checkbox"]:checked+label+input[type="time"] {
-            background-color: green;
-        }
