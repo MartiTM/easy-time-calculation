@@ -18,7 +18,7 @@
         {
             "texte": "Remise en état",
             "estSupprimable": true,
-            "ajoutMinutes": 90
+            "ajoutMinutes": 80
         },
         {
             "texte": "Reprise des circulations",
