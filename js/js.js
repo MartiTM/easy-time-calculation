@@ -90,7 +90,7 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     // Créer un nouvel élément input de type texte
     var nouvelInputText = document.createElement("input");
     nouvelInputText.type = "text";
-    nouvelInputText.placeholder = texte;
+    nouvelInputText.value = texte;
 
     // Créer un bouton pour rajouter des étapes
     var nouveauBouton = document.createElement("button");
