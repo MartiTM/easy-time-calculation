@@ -10,7 +10,7 @@
             "ajoutMinutes": 20
         },
         {
-            "texte": "Arrivée CIL",
+            "texte": "Évacuation du train",
             "estSupprimable": true,
             "ajoutMinutes": 20,
             "estIndependant": true

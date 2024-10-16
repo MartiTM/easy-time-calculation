@@ -11,7 +11,7 @@
             "estIndependant": true
         },
         {
-            "texte": "Évacuation",
+            "texte": "Évacuation du train",
             "estSupprimable": true,
             "estIndependant": true,
             "ajoutMinutes": 60
