@@ -27,9 +27,7 @@ function calculTemps(temps, elementHeureAvant, elementHeureMaintenant) {
 
     // Dispatch it.
     elementHeureMaintenant.dispatchEvent(event);
-
 }
-
 
 function depassementHeure(tempsReference, elementPrecedent, elementAVerifier) {
 
@@ -69,14 +67,10 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     // Créer un nouvel ensemble de conteneurs
     var div = document.createElement("div");
 
-
-
     // Créer un nouvel élément input de type time
     var nouvelInputTime = document.createElement("input");
     nouvelInputTime.type = "time";
     nouvelInputTime.className = "heure";
-
-
 
     if (elementPrecedent != null) {
 
@@ -155,6 +149,7 @@ function listeDEtape(ensemble) {
 
     var premiereDiv = null
     var divPrecedente = null
+    var conteneur = document.getElementById('listehorraire');
 
     for (const element of ensemble.liste) {
         divUtilise = divPrecedente
@@ -165,15 +160,23 @@ function listeDEtape(ensemble) {
         var div = ajouterUneEtape(element.texte, element.estSupprimable, element.ajoutMinutes, divUtilise)
 
         // Ajouter l'ensemble au conteneur principal
-        var conteneur = document.getElementById('listehorraire');
         conteneur.appendChild(div);
         if (!element.estIndependant) {
-            divPrecedente = div
+            divPrecedente = div;
         }
         if (premiereDiv == null) {
             premiereDiv = divPrecedente
         }
     }
+
+    const horraireHRE = document.createElement("h2");
+    const texthorraireHRE = document.createTextNode('');
+    horraireHRE.appendChild(texthorraireHRE);
+    conteneur.appendChild(horraireHRE);
+
+    divPrecedente.getElementsByClassName('heure')[0].addEventListener('change', function (event) {
+        horraireHRE.innerText= event.target.value;
+    });
 }
 
 function LancerPage(cheminJSON) {
