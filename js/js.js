@@ -169,10 +169,17 @@ function listeDEtape(ensemble) {
         }
     }
 
+    const conteneurhorraireHRE = document.createElement("div");
+    conteneurhorraireHRE.id="conteneurHRE";
     const horraireHRE = document.createElement("h2");
+    const textHRE = document.createElement('h2');
     const texthorraireHRE = document.createTextNode('');
+    const texteHRE = document.createTextNode('HRE : ');
     horraireHRE.appendChild(texthorraireHRE);
-    conteneur.appendChild(horraireHRE);
+    textHRE.appendChild(texteHRE);
+    conteneur.appendChild(conteneurhorraireHRE);
+    conteneurhorraireHRE.appendChild(textHRE);
+    conteneurhorraireHRE.appendChild(horraireHRE);
 
     divPrecedente.getElementsByClassName('heure')[0].addEventListener('change', function (event) {
         horraireHRE.innerText= event.target.value;
