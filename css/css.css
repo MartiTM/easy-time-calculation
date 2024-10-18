@@ -12,7 +12,7 @@ input::placeholder {
 }
 
 input[type=text] {
-    width: 350px;
+    width: 600px;
     height: 25px;
     margin-left: 25px;
     margin-right: 25px;
