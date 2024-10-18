@@ -18,6 +18,14 @@ input[type=text] {
     margin-right: 25px;
 }
 
+.orangeborder{
+    border:solid 2px orange;
+}
+
+.redborder{
+    border:solid 2px red;
+}
+
 input[type=time] {
     margin: 10px;
 }

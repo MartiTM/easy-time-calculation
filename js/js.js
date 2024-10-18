@@ -91,6 +91,35 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
     var nouvelInputText = document.createElement("input");
     nouvelInputText.type = "text";
     nouvelInputText.value = texte;
+    nouvelInputText.maxLength = 80;
+
+    var avertissement = document.createElement("div");
+    var pAvertissement = document.createElement("p");
+    avertissement.appendChild(pAvertissement);
+    pAvertissement.textContent = "80 caractères maximum";
+    avertissement.style.display="none";
+    pAvertissement.style.margin=0;
+    pAvertissement.style.textAlign="center";
+    pAvertissement.style.color="orange";
+    
+    //fonction pour avertir qu'on est à 75 caractère
+    nouvelInputText.addEventListener('input', function () {
+        if (nouvelInputText.value.length == 80) {
+            nouvelInputText.classList.remove("orangeborder");
+            nouvelInputText.classList.add("redborder");
+            avertissement.style.display="inline";
+            pAvertissement.style.color="red";
+        } else if (nouvelInputText.value.length > 75) {
+            nouvelInputText.classList.add("orangeborder");
+            nouvelInputText.classList.remove("redborder");
+            avertissement.style.display="inline";
+            pAvertissement.style.color="orange";
+        } else {
+            nouvelInputText.classList.remove("orangeborder");
+            nouvelInputText.classList.remove("redborder");
+            avertissement.style.display="none";
+        }
+    });
 
     // Créer un bouton pour rajouter des étapes
     var nouveauBouton = document.createElement("button");
@@ -130,6 +159,7 @@ function ajouterUneEtape(texte = 'oui', estSupprimable = false, ajoutMinutes = 0
         }
     });
     // Ajouter les éléments au conteneur
+    div.appendChild(avertissement);
     div.appendChild(nouvelInputTime);
     div.append(":")
     div.appendChild(nouvelInputText);
@@ -170,7 +200,7 @@ function listeDEtape(ensemble) {
     }
 
     const conteneurhorraireHRE = document.createElement("div");
-    conteneurhorraireHRE.id="conteneurHRE";
+    conteneurhorraireHRE.id = "conteneurHRE";
     const horraireHRE = document.createElement("h2");
     const textHRE = document.createElement('h2');
     const texthorraireHRE = document.createTextNode('');
@@ -182,7 +212,7 @@ function listeDEtape(ensemble) {
     conteneurhorraireHRE.appendChild(horraireHRE);
 
     divPrecedente.getElementsByClassName('heure')[0].addEventListener('change', function (event) {
-        horraireHRE.innerText= event.target.value;
+        horraireHRE.innerText = event.target.value;
     });
 }
 

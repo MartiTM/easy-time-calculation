@@ -36,6 +36,13 @@ main {
 
 }
 
+.orangeborder{
+    border:solid 2px orange;
+}
+.redborder{
+    border:solid 2px red;
+}
+
 h1 {
     text-align: center;
 }
