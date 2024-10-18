@@ -25,15 +25,15 @@ input[type=checkbox]{
 }
 
 main {
-    display: flex;
-
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
 
     gap: 50px;
     padding-right: 75px;
 
     align-items: center;
+
+    grid-template-columns: 3fr 2fr;
+
 }
 
 h1 {
@@ -55,4 +55,14 @@ h2 {
     margin: 0 10px;
     color: white;
     text-align: center;
+}
+
+#decallage{
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: black;
+    color: white;
 }
