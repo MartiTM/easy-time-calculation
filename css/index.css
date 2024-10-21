@@ -14,3 +14,21 @@ main {
 h1 {
     text-align: center;
 }
+
+#titre{
+    list-style: none;
+}
+
+span{
+    font-weight: bold;
+}
+
+#containeur{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+aside{
+    margin: auto;
+    margin-right: 20%;
+}
