@@ -2,6 +2,11 @@
     display:none;
 }
 
+#containeur{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 main {
     display: flex;
 
@@ -22,10 +27,7 @@ span{
     font-weight: bold;
 }
 
-#containeur{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 
 aside{
     margin: auto;
